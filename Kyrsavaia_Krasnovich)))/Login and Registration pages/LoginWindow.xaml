@@ -1,0 +1,26 @@
+﻿<Window x:Class="Kyrsavaia_Krasnovich___.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kyrsavaia_Krasnovich___"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1024" Width="1440">
+    <Grid x:Name="loginPage" Cursor="Arrow" FlowDirection="LeftToRight" RenderTransformOrigin="0.27,0.351">
+        <Grid.Background>
+            <ImageBrush ImageSource="/ПанельЛогинаИзображениеКурсач.png"/>
+        </Grid.Background>
+        <Label x:Name="LabelDobroPojalovat" Content="Добро пожаловать в энциклопедию танков советского времени!" HorizontalAlignment="Left" Margin="390,37,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="DarkBlue" FontSize="32" FontWeight="Bold" Width="1074" Height="56"/>
+        <Label x:Name="Voidite" Content="Войдите чтобы продолжить" HorizontalAlignment="Left" Margin="540,98,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="DarkBlue" FontWeight="Bold" FontSize="55"/>
+        <TextBox x:Name="txtboxlogin" HorizontalAlignment="Left" Margin="540,270,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="774" Height="130" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" Padding="20,1,1,1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="Bell MT" FontSize="55" TextChanged="txtboxlogin_TextChanged"/>
+
+        <Button x:Name="btnregistration" Content="Зарегистрируйтесь" HorizontalAlignment="Left" Margin="540,617,0,0" VerticalAlignment="Top" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" Height="130" Width="440" HorizontalContentAlignment="Center" Padding="1,1,1,1" UseLayoutRounding="False" FontFamily="Bell MT" FontSize="40" Cursor="Hand"/>
+        <Button x:Name="btnvoiti" Content="Войти" HorizontalAlignment="Left" Margin="990,617,0,0" VerticalAlignment="Top" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" Height="130" Width="324" HorizontalContentAlignment="Center" Padding="1,1,1,1" UseLayoutRounding="False" FontFamily="Bell MT" FontSize="40" Cursor="Hand"/>
+        <Label x:Name="labellogin1" Content="Логин" HorizontalAlignment="Left" Margin="847,204,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="50" FontWeight="Bold"/>
+        <Label x:Name="labelpass1" Content="Пароль" HorizontalAlignment="Left" Margin="830,405,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="50" FontWeight="Bold"/>
+        <PasswordBox x:Name="pasbx1" HorizontalAlignment="Left" Margin="540,471,0,0" VerticalAlignment="Top" Width="774" Height="130" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Bell MT" FontSize="30" MaxLength="15" ToolTip="Пароль должен состоять не более чем из 15 символов"/>
+
+
+
+    </Grid>
+</Window>
