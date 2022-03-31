@@ -9,8 +9,8 @@
     <Window.Background>
         <ImageBrush ImageSource="/ОсновноеМенюПользователь.png"/>
     </Window.Background>
-    <Grid>
-        <Image x:Name="imagetank" HorizontalAlignment="Left" Height="400" Margin="247,187,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5">
+    <Grid Width="1550" Margin="0,0,-8,-1">
+        <Image x:Name="imagetank" HorizontalAlignment="Left" Height="400" Margin="150,183,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5" Source="Vopros.png">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="imagetank_Copy" HorizontalAlignment="Left" Height="400" Margin="836,187,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="imagetank_Copy" HorizontalAlignment="Left" Height="400" Margin="901,191,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5" Source="Vopros.png">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -31,8 +31,8 @@
             </Image.RenderTransform>
         </Image>
         <Label x:Name="ky" Content="Энциклопедия советских танков" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="DarkBlue" FontWeight="Bold" FontSize="55"/>
-        <Label x:Name="labelimagetank" Content="Фотография танка" HorizontalAlignment="Left" Margin="352,137,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold"/>
-        <Label x:Name="labelimagesozdatel" Content="Фотография создателя" HorizontalAlignment="Left" Margin="917,137,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold"/>
+        <Label x:Name="labelimagetank" Content="Фотография танка" HorizontalAlignment="Left" Margin="274,137,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold"/>
+        <Label x:Name="labelimagesozdatel" Content="Фотография создателя" HorizontalAlignment="Left" Margin="980,137,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold"/>
         <ComboBox x:Name="cmbboxtanks" HorizontalAlignment="Center" Margin="0,644,0,0" VerticalAlignment="Top" Width="879" BorderBrush="DarkBlue" Foreground="DarkBlue" RenderTransformOrigin="0.5,0.5" FontFamily="Bell MT" FontSize="22" FontWeight="Bold" Height="70">
             <ComboBox.RenderTransform>
                 <TransformGroup>
@@ -50,17 +50,57 @@
             </ComboBox.Background>
         </ComboBox>
         <Label x:Name="labelusetank" Content="Выберите танк из списка" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold" Margin="0,604,0,0"/>
-        <TextBox x:Name="txtbxnumbertank" HorizontalAlignment="Left" Margin="153,764,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxnametank" HorizontalAlignment="Left" Margin="362,764,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxspeed" HorizontalAlignment="Left" Margin="571,764,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxdkinakorpusa" HorizontalAlignment="Left" Margin="153,849,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxgodvipuska" HorizontalAlignment="Left" Margin="362,849,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxcalibr" HorizontalAlignment="Left" Margin="571,849,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxarmor" HorizontalAlignment="Left" Margin="153,934,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxtypeengine" HorizontalAlignment="Left" Margin="362,934,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtbxtypegun" HorizontalAlignment="Left" Margin="571,934,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtbxnumbertank" HorizontalAlignment="Left" Margin="153,749,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxnametank" HorizontalAlignment="Left" Margin="362,749,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxspeed" HorizontalAlignment="Left" Margin="571,749,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxdkinakorpusa" HorizontalAlignment="Left" Margin="153,849,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxgodvipuska" HorizontalAlignment="Left" Margin="362,849,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxcalibr" HorizontalAlignment="Left" Margin="571,849,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxarmor" HorizontalAlignment="Left" Margin="153,949,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxtypeengine" HorizontalAlignment="Left" Margin="362,949,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtbxtypegun" HorizontalAlignment="Left" Margin="571,949,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="192" Height="80" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
         <Label x:Name="characters" Content="Характеристики" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold" Margin="335,1061,0,0"/>
-        <TextBlock x:Name="txtblockSozdatel" HorizontalAlignment="Left" Margin="947,764,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="SeaShell" Foreground="DarkBlue" Height="250" Width="433" FontFamily="Bell MT" FontWeight="Bold" FontSize="22" Cursor="Hand"/>
+        <Label x:Name="izobretatel" Content="Немного о изобретателе" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold" Margin="980,1061,0,0"/>
+        <TextBox x:Name="txtboxIzobret" HorizontalAlignment="Left" Margin="960,764,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="392" Height="250" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+        <Button x:Name="btntankadd" Content="Добавить танк" Margin="684,230,0,0" Width="192" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" RenderTransformOrigin="0.427,-9.6" Height="77" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Bell MT" FontSize="24" Cursor="Hand">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.296"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-6.301"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="bntopenprovodnik" Content="Открыть проводник" Margin="684,332,0,0" Width="192" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" RenderTransformOrigin="0.427,-9.6" Height="76" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Bell MT" FontSize="20" Cursor="Hand">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.296"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-6.301"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="updatephoto" Content="Обновить фото" Margin="684,434,0,0" Width="192" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" RenderTransformOrigin="0.427,-9.6" Height="78" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Bell MT" FontSize="24" Cursor="Hand">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.296"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-6.301"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="tanknumber" Content="Танковый номер" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="204,722,0,0"/>
+        <Label x:Name="labelnametank" Content="Название танка" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="419,722,0,0"/>
+        <Label x:Name="labelspeedtank" Content="Скорость" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="643,722,0,0"/>
+        <Label x:Name="labellenghttak" Content="Длина корпуса" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="204,829,0,0"/>
+        <Label x:Name="labelyearvipusk" Content="Год выпуска" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="412,829,0,0"/>
+        <Label x:Name="lblcalibrtank" Content="Калибр" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="643,829,0,0"/>
+        <Label x:Name="lblarmortank" Content="Бронирование" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="204,929,0,0"/>
+        <Label x:Name="lbltypeengine" Content="Тип Двигателя" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="419,929,0,0"/>
+        <Label x:Name="lblypegun" Content="Тип орудия" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="11" Margin="629,929,0,0"/>
 
     </Grid>
 </Window>
