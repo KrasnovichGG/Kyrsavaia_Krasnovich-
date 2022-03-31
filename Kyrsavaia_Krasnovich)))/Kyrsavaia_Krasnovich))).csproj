@@ -95,14 +95,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OsnovaMenuUser.xaml">
+    <Page Include="OsnovMenus\OsnovaMenuUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OsnovMenus\TankPageADD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OsnovaMenuUser.xaml.cs">
+    <Compile Include="OsnovMenus\OsnovaMenuUser.xaml.cs">
       <DependentUpon>OsnovaMenuUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OsnovMenus\TankPageADD.xaml.cs">
+      <DependentUpon>TankPageADD.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -148,10 +155,16 @@
     <Resource Include="ОсновноеМенюПользователь.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Vopros.png" />
+    <Resource Include="Фонтанк1р..png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Фонтанк1р..png" />
+    <Resource Include="OsnovMenus\ПанельДобавленияИзображениеДвигателя.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="OsnovMenus\Снимок.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="OsnovMenus\Снимок2.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="/ОсновноеМенюПользователь.png"/>
     </Window.Background>
     <Grid Width="1550" Margin="0,0,-8,-1">
-        <Image x:Name="imagetank" HorizontalAlignment="Left" Height="400" Margin="150,183,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5" Source="Vopros.png">
+        <Image x:Name="imagetank" HorizontalAlignment="Left" Height="400" Margin="150,183,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="imagetank_Copy" HorizontalAlignment="Left" Height="400" Margin="901,191,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5" Source="Vopros.png">
+        <Image x:Name="imagetank_Copy" HorizontalAlignment="Left" Height="400" Margin="901,191,0,0" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
