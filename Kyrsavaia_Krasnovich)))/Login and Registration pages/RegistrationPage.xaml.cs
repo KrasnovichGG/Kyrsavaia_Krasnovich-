@@ -23,5 +23,32 @@ namespace Kyrsavaia_Krasnovich___
         {
             InitializeComponent();
         }
+
+        private async void btnregistrationbd_Click(object sender, RoutedEventArgs e)
+        {
+            var ass = await Users.TakeList();
+            if (!await Check())
+            {
+                Users users = new Users(txtboxnameuser.Text,txtboxgmail.Text, Passwordbxregistration.Password);
+                users.AddToDataBase();
+                MessageBox.Show("Успешное добавление!");
+            }
+            else
+            {
+                MessageBox.Show("Такой пользователь уже существует!");
+            }
+        }
+
+        private async Task<bool> Check()
+        {
+            var CumCollection = await Users.TakeList();
+            foreach (var item in CumCollection )
+            {
+                if (txtboxnameuser.Text == item.UserName)
+                    return true;
+
+            }
+            return false;   
+        }
     }
 }

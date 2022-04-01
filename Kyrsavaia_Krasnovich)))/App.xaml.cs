@@ -13,5 +13,9 @@ namespace Kyrsavaia_Krasnovich___
     /// </summary>
     public partial class App : Application
     {
+        public static readonly string NameBase = "TanksVikipedia";
+        public static readonly string ConnectionString = "mongodb://localhost";
+        public static readonly string UserCollection = "Users";
+        public Users Users  { get; set; }
     }
 }

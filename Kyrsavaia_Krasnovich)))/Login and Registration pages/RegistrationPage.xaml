@@ -18,6 +18,7 @@
         <Label x:Name="labellogin" Content="Введите ваш логин" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold"/>
         <Label x:Name="labelmail" Content="Введите вашу почту" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold"/>
         <Button x:Name="btnback1" Content="Назад" HorizontalAlignment="Center" Margin="0,689,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.227,0.017" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" FontFamily="Bell MT" Height="55" Width="200" FontSize="30"/>
+        <Button x:Name="btnregistrationbd" Content="Поехали!" HorizontalAlignment="Center" Margin="0,555,0,0" VerticalAlignment="Top" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" Height="64" Width="242" HorizontalContentAlignment="Center" Padding="1,1,1,1" UseLayoutRounding="False" FontFamily="Bell MT" FontSize="40" Cursor="Hand" Click="btnregistrationbd_Click"/>
 
 
     </Grid>

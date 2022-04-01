@@ -29,5 +29,11 @@ namespace Kyrsavaia_Krasnovich___
         {
 
         }
+
+        private void btnregistration_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationPage registrationPage = new RegistrationPage();
+            registrationPage.Show();
+        }
     }
 }
