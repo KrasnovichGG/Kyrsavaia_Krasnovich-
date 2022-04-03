@@ -25,9 +25,34 @@ namespace Kyrsavaia_Krasnovich___
             InitializeComponent();
         }
 
-        private void txtboxlogin_TextChanged(object sender, TextChangedEventArgs e)
+        private async void VoitiinASS(object sender, RoutedEventArgs e)
         {
+            if (await Check())
+            {
+                OsnovaMenuUser osnovaMenuUser = new OsnovaMenuUser();
+                osnovaMenuUser.Show();
+                MessageBox.Show($"Успешный вход!{ (App.Users.IsAdmin ?"Админ":"Пользователь")}");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Такого пользователя не существует!");
+            }
+        }
+        private async Task<bool> Check()
+        {
+            var CumCollection = await Users.TakeList();
+            foreach (var item in CumCollection)
+            {
+                if (txtboxlogin.Text == item.UserName && pasbx1.Password == item.Password)
+                {
+                    App.Users = item;
+                    return true;
+                }
+                    
 
+            }
+            return false;
         }
 
         private void btnregistration_Click(object sender, RoutedEventArgs e)
@@ -35,5 +60,20 @@ namespace Kyrsavaia_Krasnovich___
             RegistrationPage registrationPage = new RegistrationPage();
             registrationPage.Show();
         }
+
+        //private void VoitiinASS(object sender, RoutedEventArgs e)
+        //{
+        //    if (await Check())
+        //    {
+        //        OsnovaMenuUser osnovaMenuUser = new OsnovaMenuUser();
+        //        osnovaMenuUser.Show();
+        //        MessageBox.Show("Успешный вход!");
+        //        this.Close();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Такого пользователя не существует!");
+        //    }
+        //}
     }
 }

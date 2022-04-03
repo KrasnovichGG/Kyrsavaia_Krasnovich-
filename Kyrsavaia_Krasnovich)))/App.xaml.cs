@@ -16,6 +16,6 @@ namespace Kyrsavaia_Krasnovich___
         public static readonly string NameBase = "TanksVikipedia";
         public static readonly string ConnectionString = "mongodb://localhost";
         public static readonly string UserCollection = "Users";
-        public Users Users  { get; set; }
+        public static Users Users  { get; set; }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kyrsavaia_Krasnovich___"
         mc:Ignorable="d"
-        Title="OsnovaMenuUser" Height="1200" Width="1550">
+        Title="OsnovaMenuUser" Height="1080" Width="1550">
     <Window.Background>
         <ImageBrush ImageSource="/ОсновноеМенюПользователь.png"/>
     </Window.Background>

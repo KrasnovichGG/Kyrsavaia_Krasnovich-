@@ -22,6 +22,18 @@ namespace Kyrsavaia_Krasnovich___
         public OsnovaMenuUser()
         {
             InitializeComponent();
+            if (App.Users.IsAdmin)
+            {
+                btntankadd.Visibility = Visibility.Visible;
+                bntopenprovodnik.Visibility = Visibility.Visible;
+                updatephoto.Visibility = Visibility.Visible;
+            }
+            else if(App.Users.IsAdmin == false)
+            {
+                btntankadd.Visibility= Visibility.Collapsed;
+                bntopenprovodnik.Visibility= Visibility.Collapsed;
+                updatephoto.Visibility= Visibility.Collapsed;
+            }
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

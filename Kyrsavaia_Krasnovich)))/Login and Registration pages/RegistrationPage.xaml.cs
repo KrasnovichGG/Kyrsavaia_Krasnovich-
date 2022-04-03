@@ -32,10 +32,14 @@ namespace Kyrsavaia_Krasnovich___
                 Users users = new Users(txtboxnameuser.Text,txtboxgmail.Text, Passwordbxregistration.Password);
                 users.AddToDataBase();
                 MessageBox.Show("Успешное добавление!");
+                txtboxgmail.Clear();
+                txtboxnameuser.Clear();
+                Passwordbxregistration.Clear();
             }
             else
             {
                 MessageBox.Show("Такой пользователь уже существует!");
+                
             }
         }
 
@@ -49,6 +53,11 @@ namespace Kyrsavaia_Krasnovich___
 
             }
             return false;   
+        }
+
+        private void btnback1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
