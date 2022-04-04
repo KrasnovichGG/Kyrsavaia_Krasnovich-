@@ -27,8 +27,9 @@ namespace Kyrsavaia_Krasnovich___
         private async void btnregistrationbd_Click(object sender, RoutedEventArgs e)
         {
             var ass = await Users.TakeList();
-            if (!await Check())
+            if (!await CheckAvtorization() && CheckEmptyOrNull())
             {
+                //txtboxnameuser.Text != String.Empty;
                 Users users = new Users(txtboxnameuser.Text,txtboxgmail.Text, Passwordbxregistration.Password);
                 users.AddToDataBase();
                 MessageBox.Show("Успешное добавление!");
@@ -42,8 +43,22 @@ namespace Kyrsavaia_Krasnovich___
                 
             }
         }
+        private bool CheckEmptyOrNull()
+        {
+            if (txtboxnameuser.Text != String.Empty && txtboxgmail.Text != String.Empty && Passwordbxregistration.Password != String.Empty)
+            {
+                return true;
+            }
+            
+            else
+            {
+                MessageBox.Show("Введие символы!!");
+                return false;
+            }
+            
+        }
 
-        private async Task<bool> Check()
+        private async Task<bool> CheckAvtorization()
         {
             var CumCollection = await Users.TakeList();
             foreach (var item in CumCollection )

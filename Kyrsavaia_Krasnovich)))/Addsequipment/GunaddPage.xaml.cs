@@ -18,7 +18,7 @@ namespace Kyrsavaia_Krasnovich___
     /// <summary>
     /// Логика взаимодействия для GunaddPage.xaml
     /// </summary>
-    public partial class GunaddPage : Page
+    public partial class GunaddPage : Window
     {
         public GunaddPage()
         {

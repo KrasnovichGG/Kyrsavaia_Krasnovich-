@@ -18,7 +18,7 @@ namespace Kyrsavaia_Krasnovich___.Addsequipment
     /// <summary>
     /// Логика взаимодействия для AddEnginePage.xaml
     /// </summary>
-    public partial class AddEnginePage : Page
+    public partial class AddEnginePage : Window
     {
         public AddEnginePage()
         {

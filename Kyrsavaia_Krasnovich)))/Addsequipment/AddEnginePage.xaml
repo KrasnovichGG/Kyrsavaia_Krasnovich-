@@ -1,4 +1,4 @@
-﻿<Page x:Name="addengine" x:Class="Kyrsavaia_Krasnovich___.Addsequipment.AddEnginePage"
+﻿<Window x:Name="addengine" x:Class="Kyrsavaia_Krasnovich___.Addsequipment.AddEnginePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -20,4 +20,4 @@
         <Button x:Name="btnaddengine" Content="Добавить в базу!" HorizontalAlignment="Left" Margin="385,208,0,0" VerticalAlignment="Top" Width="235" Height="50" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="20"/>
 
     </Grid>
-</Page>
+</Window>

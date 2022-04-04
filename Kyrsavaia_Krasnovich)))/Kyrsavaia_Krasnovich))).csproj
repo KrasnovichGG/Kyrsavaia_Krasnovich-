@@ -149,6 +149,7 @@
     <Compile Include="Addsequipment\GunaddPage.xaml.cs">
       <DependentUpon>GunaddPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Armor.cs" />
     <Compile Include="Login and Registration pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>

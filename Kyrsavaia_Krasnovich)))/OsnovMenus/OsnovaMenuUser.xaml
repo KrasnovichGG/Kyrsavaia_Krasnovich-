@@ -62,7 +62,7 @@
         <Label x:Name="characters" Content="Характеристики" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold" Margin="335,1061,0,0"/>
         <Label x:Name="izobretatel" Content="Немного о изобретателе" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue" FontFamily="Bell MT" FontSize="30" FontWeight="Bold" Margin="980,1061,0,0"/>
         <TextBox x:Name="txtboxIzobret" HorizontalAlignment="Left" Margin="960,764,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="392" Height="250" Background="SeaShell" Foreground="DarkBlue" BorderBrush="DarkBlue" FontFamily="Bell MT" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
-        <Button x:Name="btntankadd" Content="Добавить танк" Margin="684,230,0,0" Width="192" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" RenderTransformOrigin="0.427,-9.6" Height="77" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Bell MT" FontSize="24" Cursor="Hand">
+        <Button x:Name="btntankadd" Content="Добавить танк" Margin="684,230,0,0" Width="192" Background="SeaShell" BorderBrush="DarkBlue" Foreground="DarkBlue" RenderTransformOrigin="0.427,-9.6" Height="77" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Bell MT" FontSize="24" Cursor="Hand" Click="btntankadd_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

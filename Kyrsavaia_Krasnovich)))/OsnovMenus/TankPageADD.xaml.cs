@@ -18,11 +18,17 @@ namespace Kyrsavaia_Krasnovich___
     /// <summary>
     /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Page1 : Window
     {
         public Page1()
         {
             InitializeComponent();
+        }
+
+        private void btnaddarmorDB_Click(object sender, RoutedEventArgs e)
+        {
+            AddBron addBron = new AddBron();
+            addBron.Show();
         }
     }
 }

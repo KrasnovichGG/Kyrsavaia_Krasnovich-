@@ -40,5 +40,11 @@ namespace Kyrsavaia_Krasnovich___
         {
 
         }
+
+        private void btntankadd_Click(object sender, RoutedEventArgs e)
+        {
+            Page1 TankADPAGE =  new Page1();
+            TankADPAGE.Show();
+        }
     }
 }
