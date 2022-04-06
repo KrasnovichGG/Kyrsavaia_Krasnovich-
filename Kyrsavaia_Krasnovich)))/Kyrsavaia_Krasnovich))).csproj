@@ -155,6 +155,7 @@
     </Compile>
     <Compile Include="Armor.cs" />
     <Compile Include="Engine.cs" />
+    <Compile Include="Gun.cs" />
     <Compile Include="IArmor.cs" />
     <Compile Include="IEngine.cs" />
     <Compile Include="IGun.cs" />

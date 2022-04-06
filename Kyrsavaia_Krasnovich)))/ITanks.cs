@@ -16,5 +16,6 @@ namespace Kyrsavaia_Krasnovich___
         public string CalibrTank { get; set; }
         IArmor ArmorTank { get; set; }
         IEngine EngineTank { get; set; }
+        IGun GunTank { get; set; }
     }
 }

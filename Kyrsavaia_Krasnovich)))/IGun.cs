@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,10 @@ namespace Kyrsavaia_Krasnovich___
 {
     public  interface IGun
     {
-        public string ID { get; set; }
-        public string NameGun { get; set; }
+        public ObjectId Id { get; set; }
+        public string Name { get; set; }
         public event Action<string> Tankist;
+        public void AddToDataBaseGun();
+        public Task<List<IGun>> TakeToDatabaseGun();
     }
 }
