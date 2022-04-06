@@ -19,6 +19,8 @@ namespace Kyrsavaia_Krasnovich___
     /// </summary>
     public partial class OsnovaMenuUser : Window
     {
+        //public static Armor Armors { get; set; }
+        //public static Engine Engines { get; set; }
         public OsnovaMenuUser()
         {
             InitializeComponent();

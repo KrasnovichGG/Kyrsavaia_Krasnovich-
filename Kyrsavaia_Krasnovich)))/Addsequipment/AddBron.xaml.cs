@@ -50,7 +50,7 @@ namespace Kyrsavaia_Krasnovich___
             var ArmorCollection = await Armor.TakeArmorList();
             foreach (var item in ArmorCollection)
             {
-                if (txtbxaddarmor.Text == item.NameArmor)
+                if (txtbxaddarmor.Text == item.Name)
                     return true;
 
             }

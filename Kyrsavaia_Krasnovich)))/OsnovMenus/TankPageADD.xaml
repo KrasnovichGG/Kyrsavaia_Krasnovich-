@@ -456,5 +456,29 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button
+            x:Name="btnaddengineDB"
+            Width="221"
+            Height="68"
+            Margin="674,861,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="SeaShell"
+            BorderBrush="DarkBlue"
+            Content="Добавление Двигателя"
+            Cursor="Hand"
+            FontFamily="Bell MT"
+            FontSize="20"
+            Foreground="DarkBlue"
+            RenderTransformOrigin="0.427,-9.6" Click="btnaddengineDB_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleX="0.296" />
+                    <RotateTransform />
+                    <TranslateTransform X="-6.301" />
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>

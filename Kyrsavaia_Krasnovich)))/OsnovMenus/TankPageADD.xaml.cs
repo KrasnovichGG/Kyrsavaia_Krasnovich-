@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kyrsavaia_Krasnovich___.Addsequipment;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,12 @@ namespace Kyrsavaia_Krasnovich___
         {
             AddBron addBron = new AddBron();
             addBron.Show();
+        }
+
+        private void btnaddengineDB_Click(object sender, RoutedEventArgs e)
+        {
+            AddEnginePage addEnginePage = new AddEnginePage();
+            addEnginePage.Show();
         }
     }
 }

@@ -9,30 +9,37 @@ using System.Threading.Tasks;
 
 namespace Kyrsavaia_Krasnovich___
 {
-    public class Armor
+    public class Armor : IArmor
     {
         public Armor(string nameArmor)
         {
-           NameArmor = nameArmor;
+           Name = nameArmor;
         }
 
         [BsonId]
         [BsonIgnoreIfDefault]
-        public ObjectId id { get; set; }
+        public ObjectId Id { get; set; }
         [BsonElement]
-        public string NameArmor { get; set; }
+        public string Name { get; set; }
+
+        public event Action<string> Tankist;
+
         public void AddToDataBaseArmor()
         {
             MongoClient clientArmor = new MongoClient(App.ConnectionString);
             var n = clientArmor.GetDatabase(App.NameBase);
-            var c = n.GetCollection<Armor>(App.ArmorCollection);
+            var c = n.GetCollection<IArmor>(App.ArmorCollection);
+            Tankist?.Invoke("Броня добавлена в базу данных");
             c.InsertOne(this);
         }
-        public async static Task<List<Armor>> TakeArmorList()
+        public async Task<List<IArmor>> TakeArmorList()
         {
             MongoClient mongoClientListArmor = new MongoClient(App.ConnectionString);
             var n = mongoClientListArmor.GetDatabase(App.NameBase);
-            return await n.GetCollection<Armor>(App.ArmorCollection).FindAsync(x => true).Result.ToListAsync();
+            Tankist?.Invoke("Список брони успешно получен!");
+            return await n.GetCollection<IArmor>(App.ArmorCollection).FindAsync(x => true).Result.ToListAsync();
         }
+
+
     }
 }
