@@ -30,13 +30,12 @@ namespace Kyrsavaia_Krasnovich___
             Tankist.Invoke("Орудие добавлено в базу данных!");
             b.InsertOne(this);
         }
-        public async Task<List<IGun>> TakeToDatabaseGun()
+        public async Task<List<IGun>> TakeGunList()
         {
             MongoClient mongoClientTakeGun = new MongoClient(App.ConnectionString);
             var c = mongoClientTakeGun.GetDatabase(App.NameBase);
-            var b = c.GetCollection<IGun>(App.GunCollection);
             Tankist.Invoke("Список орудий успешно получен из базы данных!");
-            return await c.GetCollection<IGun>(App.ArmorCollection).FindAsync(x => true).Result.ToListAsync();
+            return await c.GetCollection<IGun>(App.GunCollection).FindAsync(x => true).Result.ToListAsync();
         }
     }
 }

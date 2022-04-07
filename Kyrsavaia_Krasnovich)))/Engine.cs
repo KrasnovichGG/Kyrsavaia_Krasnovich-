@@ -36,7 +36,7 @@ namespace Kyrsavaia_Krasnovich___
         {
             MongoClient mongoClientListEngine = new MongoClient(App.ConnectionString);
             var v = mongoClientListEngine.GetDatabase(App.NameBase);
-            Tankist?.Invoke("Список двигателей получен из базы данных!");
+            Tankist?.Invoke("Список двигателей успешно получен из базы данных!");
             return await v.GetCollection<IEngine>(App.EngineCollection).FindAsync(x => true).Result.ToListAsync();
         }
     }
