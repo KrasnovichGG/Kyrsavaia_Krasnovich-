@@ -10,9 +10,8 @@ namespace Kyrsavaia_Krasnovich___
     public interface IArmor 
     {
         public ObjectId Id { get; set; }
-        public string Name { get; set; }
-        public void AddToDataBaseArmor();
-        public Task<List<IArmor>> TakeArmorList();
+        public string NameArmor { get; set; }
+        public Task AddToDataBaseArmor();
         event Action<string> Tankist;
     }
 }

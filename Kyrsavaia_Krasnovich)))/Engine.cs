@@ -24,20 +24,37 @@ namespace Kyrsavaia_Krasnovich___
 
         public event Action<string> Tankist;
 
-        public void AddToDataBaseEngine()
+        public async Task AddToDataBaseEngine()
         {
-            MongoClient clientEngine = new MongoClient(App.ConnectionString);
-            var v = clientEngine.GetDatabase(App.NameBase);
-            var c = v.GetCollection<IEngine>(App.EngineCollection);
-            Tankist?.Invoke("Двигатель добавлен в базу данных");
-            c.InsertOne(this);
+            if (!await Check())
+            {
+                MongoClient clientEngine = new MongoClient(App.ConnectionString);
+                var v = clientEngine.GetDatabase(App.NameBase);
+                var c = v.GetCollection<IEngine>(App.EngineCollection);
+                Tankist?.Invoke("Двигатель добавлен в базу данных");
+                c.InsertOne(this);
+            }
+            else
+            {
+                Tankist?.Invoke("Такой двигатель уже существует!!!");
+            }
         }
-        public async Task<List<IEngine>> TakeEngineList()
+        public async static Task<List<IEngine>> TakeEngineList()
         {
             MongoClient mongoClientListEngine = new MongoClient(App.ConnectionString);
             var v = mongoClientListEngine.GetDatabase(App.NameBase);
-            Tankist?.Invoke("Список двигателей успешно получен из базы данных!");
             return await v.GetCollection<IEngine>(App.EngineCollection).FindAsync(x => true).Result.ToListAsync();
+        }
+
+        private async Task<bool> Check()
+        {
+            var EngineCollection = await Engine.TakeEngineList();
+            foreach (var item in EngineCollection)
+            {
+                if (this.Name == item.Name)
+                    return true;
+            }
+            return false;
         }
     }
 }

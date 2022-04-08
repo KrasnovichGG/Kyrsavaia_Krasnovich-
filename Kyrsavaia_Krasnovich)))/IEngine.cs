@@ -11,8 +11,7 @@ namespace Kyrsavaia_Krasnovich___
     {
         public ObjectId Id { get; }
         public string Name { get; set; }
-        public void AddToDataBaseEngine();
-        public Task<List<IEngine>> TakeEngineList();
+        public Task AddToDataBaseEngine();
         public event Action<string> Tankist;
     }
 }

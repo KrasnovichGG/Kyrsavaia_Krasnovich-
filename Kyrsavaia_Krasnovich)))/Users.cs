@@ -7,7 +7,6 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver.Core;
 using MongoDB.Driver;
-using MongoDB.Libmongocrypt;
 
 namespace Kyrsavaia_Krasnovich___
 {

@@ -163,6 +163,7 @@
     <Compile Include="Login and Registration pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tank.cs" />
     <Compile Include="Users.cs" />
     <Page Include="Addsequipment\AddBron.xaml">
       <SubType>Designer</SubType>

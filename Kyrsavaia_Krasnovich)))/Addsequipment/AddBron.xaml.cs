@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,32 +33,15 @@ namespace Kyrsavaia_Krasnovich___
 
         private async void btnaddarmor_Click(object sender, RoutedEventArgs e)
         {
-            if (!await Check())
-            {
-                Armor armors = new Armor(txtbxaddarmor.Text);
-                armors.AddToDataBaseArmor();
-                MessageBox.Show("Успешное добавление Бронеплит");
-                txtbxaddarmor.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Такая Бронеплита уже существует");
-
-            }
+            Armor armors = new Armor(txtbxaddarmor.Text);
+            armors.Tankist += Message;
+            await armors.AddToDataBaseArmor();
+            txtbxaddarmor.Clear();
         }
-        private async Task<bool> Check()
+        private void Message(string a)
         {
-            var ArmorCollection = await Armor.TakeArmorList();
-            foreach (var item in ArmorCollection)
-            {
-                if (txtbxaddarmor.Text == item.Name)
-                    return true;
-
-            }
-            return false;
+            MessageBox.Show(a);
         }
-
-
     }
 }
 

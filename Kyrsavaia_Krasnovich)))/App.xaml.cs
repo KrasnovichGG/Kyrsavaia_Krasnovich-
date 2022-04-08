@@ -19,6 +19,7 @@ namespace Kyrsavaia_Krasnovich___
         public static readonly string ArmorCollection = "Armors";
         public static readonly string EngineCollection = "Engines";
         public static readonly string GunCollection = "Guns";
+        public static readonly string TankCollection = "Tanks";
         public static Users Users  { get; set; }
         
     }

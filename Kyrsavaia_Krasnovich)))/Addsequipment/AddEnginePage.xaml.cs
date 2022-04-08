@@ -20,9 +20,28 @@ namespace Kyrsavaia_Krasnovich___.Addsequipment
     /// </summary>
     public partial class AddEnginePage : Window
     {
+        Engine engine = new Engine("");
         public AddEnginePage()
         {
             InitializeComponent();
+        }
+
+        private void btnback4_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private async void btnaddengine_Click(object sender, RoutedEventArgs e)
+        {
+            IEngine engines = new Engine(txtbxaddengine.Text);
+            engines.Tankist += SetMessage;
+            await engines.AddToDataBaseEngine();
+            txtbxaddengine.Clear();
+        }
+
+        private void SetMessage(string a)
+        {
+            MessageBox.Show(a);
         }
     }
 }

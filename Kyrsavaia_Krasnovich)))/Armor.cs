@@ -11,35 +11,54 @@ namespace Kyrsavaia_Krasnovich___
 {
     public class Armor : IArmor
     {
-        public Armor(string nameArmor)
-        {
-           Name = nameArmor;
-        }
 
         [BsonId]
         [BsonIgnoreIfDefault]
         public ObjectId Id { get; set; }
         [BsonElement]
-        public string Name { get; set; }
+        public string NameArmor { get; set; }
 
         public event Action<string> Tankist;
-
-        public void AddToDataBaseArmor()
+        public Armor(string nameArmor)
         {
-            MongoClient clientArmor = new MongoClient(App.ConnectionString);
-            var n = clientArmor.GetDatabase(App.NameBase);
-            var c = n.GetCollection<IArmor>(App.ArmorCollection);
-            Tankist?.Invoke("Броня добавлена в базу данных");
-            c.InsertOne(this);
+            NameArmor = nameArmor;
         }
-        public async Task<List<IArmor>> TakeArmorList()
+
+        public async Task AddToDataBaseArmor()
+        {
+            if (await Check())
+            {
+                MongoClient clientArmor = new MongoClient(App.ConnectionString);
+                var n = clientArmor.GetDatabase(App.NameBase);
+                var c = n.GetCollection<Armor>(App.ArmorCollection);
+                Tankist?.Invoke("Броня добавлена в базу данных");
+                await c.InsertOneAsync(this);
+            }
+            else
+            {
+                //Работает..
+                Tankist?.Invoke("Броня уже существует!!!");
+            }
+        }
+
+        public async static Task<List<Armor>> TakeArmorList()
         {
             MongoClient mongoClientListArmor = new MongoClient(App.ConnectionString);
             var n = mongoClientListArmor.GetDatabase(App.NameBase);
-            Tankist?.Invoke("Список брони успешно получен!");
-            return await n.GetCollection<IArmor>(App.ArmorCollection).FindAsync(x => true).Result.ToListAsync();
+            //Tankist?.Invoke("Список брони успешно получен!");
+            return await n.GetCollection<Armor>(App.ArmorCollection).FindAsync(x => true).Result.ToListAsync();
         }
 
+        private async Task<bool> Check()
+        {
+            var ArmorCollection = await Armor.TakeArmorList();
+            foreach (var item in ArmorCollection)
+            {
+                if (NameArmor == item.NameArmor)
+                    return false;
 
+            }
+            return true;
+        }
     }
 }
