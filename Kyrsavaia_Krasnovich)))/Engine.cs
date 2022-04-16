@@ -26,7 +26,7 @@ namespace Kyrsavaia_Krasnovich___
 
         public async Task AddToDataBaseEngine()
         {
-            if (!await Check())
+            if (await Check())
             {
                 MongoClient clientEngine = new MongoClient(App.ConnectionString);
                 var v = clientEngine.GetDatabase(App.NameBase);
@@ -52,9 +52,17 @@ namespace Kyrsavaia_Krasnovich___
             foreach (var item in EngineCollection)
             {
                 if (this.Name == item.Name)
-                    return true;
+                    return false ;
             }
-            return false;
+            return true ;
+        }
+
+        public async static Task<Engine> GetEngine(string name)
+        {
+            var c = await Engine.TakeEngineList();
+            if(c != null)
+                return (Engine)c.Find(x => x.Name == name);
+            return new Engine("HUI");
         }
     }
 }

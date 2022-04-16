@@ -37,5 +37,20 @@ namespace Kyrsavaia_Krasnovich___
             AddEnginePage addEnginePage = new AddEnginePage();
             addEnginePage.Show();
         }
+
+        private async void bntaddtankinprolojenie_Click(object sender, RoutedEventArgs e)
+        {
+            Tank tank = new Tank(txtbxnametank.Text, txtspeedaddpage.Text, txtdlinakorpusapageadd.Text, 
+                godvipuskaaddpage.Text, kalibraddpage.Text, await Armor.GetArmor(ArmorIdaddpage.Text), 
+                await Engine.GetEngine(EngineIdaddpage.Text), await Gun.GetGun(GunIdaddpage.Text));
+            tank.Tankist += (e) => MessageBox.Show(e);
+            await tank.AddToDataBaseTank();
+        }
+
+        private void btnaddGunDB_Click(object sender, RoutedEventArgs e)
+        {
+           GunaddPage gunaddPage = new GunaddPage();
+           gunaddPage.Show();
+        }
     }
 }

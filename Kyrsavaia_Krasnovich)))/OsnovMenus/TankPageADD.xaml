@@ -10,475 +10,550 @@
     d:DesignWidth="1550"
     Background="White"
     mc:Ignorable="d">
-
-    <Grid>
-        <Label
-            x:Name="addtankpage"
-            Margin="529,38,515,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Background="{x:Null}"
-            Content="Добавление танка"
-            FontSize="55"
-            FontWeight="Bold"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="adminonly"
-            Width="184"
-            Margin="88,71,1278,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Background="{x:Null}"
-            Content="Только Админ"
-            FontFamily="Bell MT"
-            FontSize="24"
-            FontWeight="Bold"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="labelimagetank"
-            Margin="274,137,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Фотография танка"
-            FontFamily="Bell MT"
-            FontSize="30"
-            FontWeight="Bold"
-            Foreground="DarkBlue" />
-        <Image
-            x:Name="imagetankadd1"
-            Width="500"
-            Height="400"
-            Margin="150,183,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            RenderTransformOrigin="0.5,0.5"
-            Source="Снимок.PNG">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="-0.221" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label
-            x:Name="labelimagesozdatel"
-            Margin="980,137,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Фотография создателя"
-            FontFamily="Bell MT"
-            FontSize="30"
-            FontWeight="Bold"
-            Foreground="DarkBlue" />
-        <Image
-            x:Name="imagetankadd"
-            Width="500"
-            Height="400"
-            Margin="901,191,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            RenderTransformOrigin="0.5,0.5"
-            Source="Снимок2.PNG">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="-0.221" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Button
-            x:Name="btnupdatephoto"
-            Width="192"
-            Height="77"
-            Margin="686,514,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            Content="Обновить фото"
-            Cursor="Hand"
-            FontFamily="Bell MT"
-            FontSize="24"
-            Foreground="DarkBlue"
-            RenderTransformOrigin="0.427,-9.6">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="0.296" />
-                    <RotateTransform />
-                    <TranslateTransform X="-6.301" />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            x:Name="bntaddtankinprolojenie"
-            Width="277"
-            Height="130"
-            Margin="639,620,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            Content="Добавить в приложение!"
-            Cursor="Hand"
-            FontFamily="Bell MT"
-            FontSize="24"
-            Foreground="DarkBlue"
-            RenderTransformOrigin="0.427,-9.6">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="0.296" />
-                    <RotateTransform />
-                    <TranslateTransform X="-6.301" />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            x:Name="btnaddtankphoto"
-            Width="266"
-            Height="113"
-            Margin="258,632,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            Content="Добавить фото танка"
-            Cursor="Hand"
-            FontFamily="Bell MT"
-            FontSize="24"
-            Foreground="DarkBlue"
-            RenderTransformOrigin="0.427,-9.6">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="0.296" />
-                    <RotateTransform />
-                    <TranslateTransform X="-6.301" />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            x:Name="btnaddsodatelphoto"
-            Width="301"
-            Height="88"
-            Margin="1006,632,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            Content="Добавить фото создателя"
-            Cursor="Hand"
-            FontFamily="Bell MT"
-            FontSize="24"
-            Foreground="DarkBlue"
-            RenderTransformOrigin="0.427,-9.6">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="0.296" />
-                    <RotateTransform />
-                    <TranslateTransform X="-6.301" />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <TextBox
-            x:Name="txtboxIzobretpageadd"
-            Width="392"
-            Height="250"
-            Margin="980,852,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            FontWeight="Bold"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <Label
-            x:Name="izobretatel"
-            Margin="980,775,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Немного о изобретателе"
-            FontFamily="Bell MT"
-            FontSize="30"
-            FontWeight="Bold"
-            Foreground="DarkBlue" />
-        <TextBox
-            x:Name="txtbxnametank"
-            Width="192"
-            Height="80"
-            Margin="176,852,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="txtspeedaddpage"
-            Width="192"
-            Height="80"
-            Margin="412,852,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="txtdlinakorpusapageadd"
-            Width="192"
-            Height="80"
-            Margin="80,973,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="godvipuskaaddpage"
-            Width="192"
-            Height="80"
-            Margin="294,973,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="kalibraddpage"
-            Width="192"
-            Height="80"
-            Margin="508,973,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="GunIdaddpage"
-            Width="192"
-            Height="80"
-            Margin="80,1079,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="EngineIdaddpage"
-            Width="192"
-            Height="80"
-            Margin="294,1079,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <TextBox
-            x:Name="ArmorIdaddpage"
-            Width="192"
-            Height="80"
-            Margin="508,1079,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            IsReadOnly="True"
-            Text="TextBox"
-            TextWrapping="Wrap" />
-        <Label
-            x:Name="characters"
-            Margin="274,775,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Характеристики"
-            FontFamily="Bell MT"
-            FontSize="30"
-            FontWeight="Bold"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="labelnametank"
-            Margin="228,830,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Название танка"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="labelspeedtank"
-            Margin="479,830,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Скорость"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="labellenghttak"
-            Margin="134,951,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Длина корпуса"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="labelyearvipusk"
-            Margin="353,951,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Год выпуска"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="lblcalibrtank"
-            Margin="582,951,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Калибр"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="lblypegun"
-            Margin="142,1058,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Тип орудия"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="lbltypeengine"
-            Margin="353,1058,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Тип Двигателя"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Label
-            x:Name="lblarmortank"
-            Margin="565,1057,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Бронирование"
-            FontFamily="Bell MT"
-            FontSize="11"
-            Foreground="DarkBlue" />
-        <Button
-            x:Name="btnaddarmorDB"
-            Width="197"
-            Height="68"
-            Margin="687,773,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            Content="Добавление брони"
-            Cursor="Hand"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            RenderTransformOrigin="0.427,-9.6" Click="btnaddarmorDB_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="0.296" />
-                    <RotateTransform />
-                    <TranslateTransform X="-6.301" />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            x:Name="btnaddengineDB"
-            Width="221"
-            Height="68"
-            Margin="674,861,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="SeaShell"
-            BorderBrush="DarkBlue"
-            Content="Добавление Двигателя"
-            Cursor="Hand"
-            FontFamily="Bell MT"
-            FontSize="20"
-            Foreground="DarkBlue"
-            RenderTransformOrigin="0.427,-9.6" Click="btnaddengineDB_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="0.296" />
-                    <RotateTransform />
-                    <TranslateTransform X="-6.301" />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-    </Grid>
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="809*" />
+                <RowDefinition Height="375*" />
+            </Grid.RowDefinitions>
+            <Label
+                x:Name="addtankpage"
+                Width="506"
+                Height="83"
+                Margin="529,38,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="{x:Null}"
+                Content="Добавление танка"
+                FontSize="55"
+                FontWeight="Bold"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="adminonly"
+                Width="184"
+                Height="37"
+                Margin="80,71,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="{x:Null}"
+                Content="Только Админ"
+                FontFamily="Bell MT"
+                FontSize="24"
+                FontWeight="Bold"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="labelimagetank"
+                Width="280"
+                Height="43"
+                Margin="274,137,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Фотография танка"
+                FontFamily="Bell MT"
+                FontSize="30"
+                FontWeight="Bold"
+                Foreground="DarkBlue" />
+            <Image
+                x:Name="imagetankadd1"
+                Width="500"
+                Height="400"
+                Margin="150,183,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                RenderTransformOrigin="0.5,0.5"
+                Source="Снимок.PNG">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="-0.221" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label
+                x:Name="labelimagesozdatel"
+                Width="345"
+                Height="43"
+                Margin="980,137,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Фотография создателя"
+                FontFamily="Bell MT"
+                FontSize="30"
+                FontWeight="Bold"
+                Foreground="DarkBlue" />
+            <Image
+                x:Name="imagetankadd"
+                Width="500"
+                Height="400"
+                Margin="901,191,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                RenderTransformOrigin="0.5,0.5"
+                Source="Снимок2.PNG">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="-0.221" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Button
+                x:Name="btnupdatephoto"
+                Width="192"
+                Height="77"
+                Margin="686,514,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Content="Обновить фото"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="24"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button
+                x:Name="bntaddtankinprolojenie"
+                Grid.RowSpan="2"
+                Width="277"
+                Height="130"
+                Margin="639,620,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Click="bntaddtankinprolojenie_Click"
+                Content="Добавить в приложение!"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="24"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button
+                x:Name="btnaddtankphoto"
+                Grid.RowSpan="2"
+                Width="266"
+                Height="113"
+                Margin="258,632,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Content="Добавить фото танка"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="24"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button
+                x:Name="btnaddsodatelphoto"
+                Width="301"
+                Height="88"
+                Margin="1006,632,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Content="Добавить фото создателя"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="24"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBox
+                x:Name="txtboxIzobretpageadd"
+                Grid.Row="1"
+                Width="392"
+                Height="250"
+                Margin="980,138,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="DarkBlue"
+                IsReadOnly="True"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <Label
+                x:Name="izobretatel"
+                Grid.Row="1"
+                Width="372"
+                Height="43"
+                Margin="980,61,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Немного о изобретателе"
+                FontFamily="Bell MT"
+                FontSize="30"
+                FontWeight="Bold"
+                Foreground="DarkBlue" />
+            <TextBox
+                x:Name="txtbxnametank"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="176,138,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtspeedaddpage"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="412,138,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtdlinakorpusapageadd"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="80,259,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="godvipuskaaddpage"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="294,259,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="kalibraddpage"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="508,259,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="GunIdaddpage"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="80,365,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="EngineIdaddpage"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="294,365,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="ArmorIdaddpage"
+                Grid.Row="1"
+                Width="192"
+                Height="80"
+                Margin="508,365,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                Text="TextBox"
+                TextWrapping="Wrap" />
+            <Label
+                x:Name="characters"
+                Grid.Row="1"
+                Width="246"
+                Height="43"
+                Margin="274,61,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Характеристики"
+                FontFamily="Bell MT"
+                FontSize="30"
+                FontWeight="Bold"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="labelnametank"
+                Grid.Row="1"
+                Width="88"
+                Height="22"
+                Margin="228,116,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Название танка"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="labelspeedtank"
+                Grid.Row="1"
+                Width="57"
+                Height="22"
+                Margin="479,116,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Скорость"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="labellenghttak"
+                Grid.Row="1"
+                Width="85"
+                Height="22"
+                Margin="134,237,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Длина корпуса"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="labelyearvipusk"
+                Grid.Row="1"
+                Width="72"
+                Height="22"
+                Margin="353,237,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Год выпуска"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="lblcalibrtank"
+                Grid.Row="1"
+                Width="47"
+                Height="22"
+                Margin="582,237,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Калибр"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="lblypegun"
+                Grid.Row="1"
+                Width="67"
+                Height="22"
+                Margin="142,344,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Тип орудия"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="lbltypeengine"
+                Grid.Row="1"
+                Width="83"
+                Height="22"
+                Margin="353,344,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Тип Двигателя"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Label
+                x:Name="lblarmortank"
+                Grid.Row="1"
+                Width="85"
+                Height="22"
+                Margin="565,343,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Бронирование"
+                FontFamily="Bell MT"
+                FontSize="11"
+                Foreground="DarkBlue" />
+            <Button
+                x:Name="btnaddarmorDB"
+                Grid.Row="1"
+                Width="197"
+                Height="68"
+                Margin="687,59,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Click="btnaddarmorDB_Click"
+                Content="Добавление брони"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button
+                x:Name="btnaddengineDB"
+                Grid.Row="1"
+                Width="221"
+                Height="68"
+                Margin="674,147,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Click="btnaddengineDB_Click"
+                Content="Добавление Двигателя"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button
+                x:Name="btnaddGunDB"
+                Grid.Row="1"
+                Width="221"
+                Height="68"
+                Margin="724,255,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="SeaShell"
+                BorderBrush="DarkBlue"
+                Content="Добавление Орудия"
+                Cursor="Hand"
+                FontFamily="Bell MT"
+                FontSize="20"
+                Foreground="DarkBlue"
+                RenderTransformOrigin="0.427,-9.6" Click="btnaddGunDB_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.296" />
+                        <RotateTransform />
+                        <TranslateTransform X="-6.301" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+    </ScrollViewer>
 </Window>

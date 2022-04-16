@@ -7,10 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="GunaddPage"
     Width="1050"
-    Height="280"
+    Height="330"
+    ResizeMode="NoResize"
     mc:Ignorable="d">
 
-    <Grid x:Name="gunadd">
+    <Grid
+        x:Name="gunadd"
+        Width="1050"
+        Height="300">
         <Grid.Background>
             <ImageBrush ImageSource="/ПанельДобавленияОрудияИзображения.png" />
         </Grid.Background>
@@ -47,7 +51,8 @@
             Background="SeaShell"
             BorderBrush="DarkBlue"
             FontFamily="Bell MT"
-            FontSize="55"
+            FontSize="48"
+            FontWeight="Bold"
             Foreground="DarkBlue"
             TextWrapping="Wrap" />
         <Label

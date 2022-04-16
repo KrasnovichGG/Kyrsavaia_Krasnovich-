@@ -36,5 +36,13 @@ namespace Kyrsavaia_Krasnovich___
             var c = mongoClientTakeGun.GetDatabase(App.NameBase);
             return await c.GetCollection<IGun>(App.GunCollection).FindAsync(x => true).Result.ToListAsync();
         }
+
+        public async static Task<Gun> GetGun(string name)
+        {
+            var c = await Gun.TakeGunList();
+            if(c != null)
+                return (Gun)c.Find(x => x.Name == name);
+            return new Gun("HUI");
+        }
     }
 }

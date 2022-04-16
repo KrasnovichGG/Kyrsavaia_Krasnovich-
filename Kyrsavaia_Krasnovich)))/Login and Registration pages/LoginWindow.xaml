@@ -8,13 +8,13 @@
     Title="MainWindow"
     Width="1920"
     Height="1080"
-    mc:Ignorable="d">
+    mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowState="Maximized">
 
     <Grid
         x:Name="loginPage"
         Cursor="Arrow"
         FlowDirection="LeftToRight"
-        RenderTransformOrigin="0.27,0.351">
+        RenderTransformOrigin="0.27,0.351" AutomationProperties.IsOffscreenBehavior="Default">
         <Grid.Background>
             <ImageBrush ImageSource="/ПанельЛогинаИзображениеКурсач.png" />
         </Grid.Background>

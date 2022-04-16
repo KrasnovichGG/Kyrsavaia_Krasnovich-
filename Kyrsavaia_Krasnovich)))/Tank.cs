@@ -50,12 +50,12 @@ namespace Kyrsavaia_Krasnovich___
                 MongoClient mongoClientTank = new MongoClient(App.ConnectionString);
                 var c = mongoClientTank.GetDatabase(App.NameBase);
                 var b = c.GetCollection<Tank>(App.TankCollection);
-                Tankist.Invoke("Успешное добавление в базу!");
+                Tankist?.Invoke("Успешное добавление в базу!");
                 await b.InsertOneAsync(this);
             }
             else
             {
-                Tankist.Invoke("ПОШЕЛ НАХУЙ!! ТАКОЙ УЖЕ ЕСТЬ ДОЛБАЕБ ЕБАНЫЙ");
+                Tankist?.Invoke("ПОШЕЛ НАХУЙ!! ТАКОЙ УЖЕ ЕСТЬ ДОЛБАЕБ ЕБАНЫЙ");
             }
             
         }

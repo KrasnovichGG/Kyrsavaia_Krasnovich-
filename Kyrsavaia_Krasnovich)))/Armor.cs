@@ -60,5 +60,13 @@ namespace Kyrsavaia_Krasnovich___
             }
             return true;
         }
+
+        public async static Task<Armor> GetArmor(string name)
+        {
+            var c = await Armor.TakeArmorList();
+            if(c != null)
+                return c.Find(x=>x.NameArmor == name);
+            return new Armor("HUI");
+        }
     }
 }
