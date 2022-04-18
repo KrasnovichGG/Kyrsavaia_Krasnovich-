@@ -9,6 +9,8 @@
     d:DesignHeight="1200"
     d:DesignWidth="1550"
     Background="White"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
     mc:Ignorable="d">
     <ScrollViewer>
         <Grid>
@@ -539,12 +541,13 @@
                 VerticalAlignment="Top"
                 Background="SeaShell"
                 BorderBrush="DarkBlue"
+                Click="btnaddGunDB_Click"
                 Content="Добавление Орудия"
                 Cursor="Hand"
                 FontFamily="Bell MT"
                 FontSize="20"
                 Foreground="DarkBlue"
-                RenderTransformOrigin="0.427,-9.6" Click="btnaddGunDB_Click">
+                RenderTransformOrigin="0.427,-9.6">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform />

@@ -22,19 +22,37 @@ namespace Kyrsavaia_Krasnovich___
         [BsonElement]
         public string Name { get; set; }
         public event Action<string> Tankist;
-        public void AddToDataBaseGun()
+        public async Task AddToDataBaseGun()
         {
-            MongoClient mongoClientGun = new MongoClient(App.ConnectionString);
-            var c = mongoClientGun.GetDatabase(App.NameBase);
-            var b = c.GetCollection<IGun>(App.GunCollection);
-            Tankist.Invoke("Орудие добавлено в базу данных!");
-            b.InsertOne(this);
+            if(await Check())
+            {
+                MongoClient mongoClientGun = new MongoClient(App.ConnectionString);
+                var c = mongoClientGun.GetDatabase(App.NameBase);
+                var b = c.GetCollection<IGun>(App.GunCollection);
+                Tankist.Invoke("Орудие добавлено в базу данных!");
+                b.InsertOne(this);
+            }
+            else
+            {
+                Tankist?.Invoke("Такое орудие уже сущесетвует!");
+            }
+           
         }
         public async static Task<List<IGun>> TakeGunList()
         {
             MongoClient mongoClientTakeGun = new MongoClient(App.ConnectionString);
             var c = mongoClientTakeGun.GetDatabase(App.NameBase);
             return await c.GetCollection<IGun>(App.GunCollection).FindAsync(x => true).Result.ToListAsync();
+        }
+        private async Task<bool> Check()
+        {
+            var GunCollection = await Gun.TakeGunList();
+            foreach (var item in GunCollection)
+            {
+                if (this.Name == item.Name)
+                    return false;
+            }
+            return true;
         }
 
         public async static Task<Gun> GetGun(string name)

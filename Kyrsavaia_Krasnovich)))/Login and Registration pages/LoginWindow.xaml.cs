@@ -27,7 +27,7 @@ namespace Kyrsavaia_Krasnovich___
 
         private async void VoitiinASS(object sender, RoutedEventArgs e)
         {
-            if (await Check())
+            if (await Check() && CheckEmptyOrNull())
             {
                 OsnovaMenuUser osnovaMenuUser = new OsnovaMenuUser();
                 osnovaMenuUser.Show();
@@ -61,19 +61,19 @@ namespace Kyrsavaia_Krasnovich___
             registrationPage.Show();
         }
 
-        //private void VoitiinASS(object sender, RoutedEventArgs e)
-        //{
-        //    if (await Check())
-        //    {
-        //        OsnovaMenuUser osnovaMenuUser = new OsnovaMenuUser();
-        //        osnovaMenuUser.Show();
-        //        MessageBox.Show("Успешный вход!");
-        //        this.Close();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Такого пользователя не существует!");
-        //    }
-        //}
+        private bool CheckEmptyOrNull()
+        {
+            if (txtboxlogin.Text != String.Empty && pasbx1.Password != String.Empty)
+            {
+                return true;
+            }
+
+            else
+            {
+                MessageBox.Show("Введие символы!!");
+                return false;
+            }
+
+        }
     }
 }

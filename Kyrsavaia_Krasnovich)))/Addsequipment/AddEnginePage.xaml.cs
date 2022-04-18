@@ -33,15 +33,32 @@ namespace Kyrsavaia_Krasnovich___.Addsequipment
 
         private async void btnaddengine_Click(object sender, RoutedEventArgs e)
         {
-            IEngine engines = new Engine(txtbxaddengine.Text);
-            engines.Tankist += SetMessage;
-            await engines.AddToDataBaseEngine();
-            txtbxaddengine.Clear();
+            if (CheckEmptyOrNull())
+            {
+                IEngine engines = new Engine(txtbxaddengine.Text);
+                engines.Tankist += SetMessage;
+                await engines.AddToDataBaseEngine();
+                txtbxaddengine.Clear();
+            }
         }
 
         private void SetMessage(string a)
         {
             MessageBox.Show(a);
+        }
+        private bool CheckEmptyOrNull()
+        {
+            if (txtbxaddengine.Text != String.Empty)
+            {
+                return true;
+            }
+
+            else
+            {
+                MessageBox.Show("Введие символы!!");
+                return false;
+            }
+
         }
     }
 }

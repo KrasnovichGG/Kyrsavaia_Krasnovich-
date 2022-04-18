@@ -11,7 +11,7 @@ namespace Kyrsavaia_Krasnovich___
     {
         public ObjectId Id { get; set; }
         public string Name { get; set; }
-        public void AddToDataBaseGun();
+        public Task AddToDataBaseGun();
         public event Action<string> Tankist;
     }
 }

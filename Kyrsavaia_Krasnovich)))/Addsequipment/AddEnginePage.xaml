@@ -61,9 +61,9 @@
             Background="SeaShell"
             BorderBrush="DarkBlue"
             FontFamily="Bell MT"
-            FontSize="55"
+            FontSize="45"
             Foreground="DarkBlue"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap" FontWeight="Normal" />
         <Button
             x:Name="btnback4"
             Width="107"

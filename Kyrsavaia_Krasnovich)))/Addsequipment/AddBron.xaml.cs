@@ -33,14 +33,31 @@ namespace Kyrsavaia_Krasnovich___
 
         private async void btnaddarmor_Click(object sender, RoutedEventArgs e)
         {
-            Armor armors = new Armor(txtbxaddarmor.Text);
-            armors.Tankist += Message;
-            await armors.AddToDataBaseArmor();
-            txtbxaddarmor.Clear();
+            if (CheckEmptyOrNull())
+            {
+                Armor armors = new Armor(txtbxaddarmor.Text);
+                armors.Tankist += Message;
+                await armors.AddToDataBaseArmor();
+                txtbxaddarmor.Clear();
+            }
         }
         private void Message(string a)
         {
             MessageBox.Show(a);
+        }
+        private bool CheckEmptyOrNull()
+        {
+            if (txtbxaddarmor.Text != String.Empty)
+            {
+                return true;
+            }
+
+            else
+            {
+                MessageBox.Show("Введие символы!!");
+                return false;
+            }
+
         }
     }
 }

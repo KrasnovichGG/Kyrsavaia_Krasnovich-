@@ -51,8 +51,8 @@
             Background="SeaShell"
             BorderBrush="DarkBlue"
             FontFamily="Bell MT"
-            FontSize="48"
-            FontWeight="Bold"
+            FontSize="45"
+            FontWeight="Normal"
             Foreground="DarkBlue"
             TextWrapping="Wrap" />
         <Label
@@ -74,6 +74,7 @@
             VerticalAlignment="Top"
             Background="SeaShell"
             BorderBrush="DarkBlue"
+            Click="btnback2_Click"
             Content="Назад"
             FontFamily="Bell MT"
             FontSize="20"
@@ -87,6 +88,7 @@
             VerticalAlignment="Top"
             Background="SeaShell"
             BorderBrush="DarkBlue"
+            Click="btnaddbdgun_Click"
             Content="Добавить в базу!"
             FontFamily="Bell MT"
             FontSize="20"
