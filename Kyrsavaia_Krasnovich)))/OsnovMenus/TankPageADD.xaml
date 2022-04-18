@@ -107,7 +107,7 @@
                 x:Name="btnupdatephoto"
                 Width="192"
                 Height="77"
-                Margin="686,514,0,0"
+                Margin="685,207,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -129,10 +129,9 @@
             </Button>
             <Button
                 x:Name="bntaddtankinprolojenie"
-                Grid.RowSpan="2"
-                Width="277"
-                Height="130"
-                Margin="639,620,0,0"
+                Width="235"
+                Height="95"
+                Margin="659,616,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -141,7 +140,7 @@
                 Content="Добавить в приложение!"
                 Cursor="Hand"
                 FontFamily="Bell MT"
-                FontSize="24"
+                FontSize="20"
                 Foreground="DarkBlue"
                 RenderTransformOrigin="0.427,-9.6">
                 <Button.RenderTransform>
@@ -155,10 +154,9 @@
             </Button>
             <Button
                 x:Name="btnaddtankphoto"
-                Grid.RowSpan="2"
                 Width="266"
                 Height="113"
-                Margin="258,632,0,0"
+                Margin="260,612,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -182,7 +180,7 @@
                 x:Name="btnaddsodatelphoto"
                 Width="301"
                 Height="88"
-                Margin="1006,632,0,0"
+                Margin="996,626,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -205,9 +203,9 @@
             <TextBox
                 x:Name="txtboxIzobretpageadd"
                 Grid.Row="1"
-                Width="392"
-                Height="250"
-                Margin="980,138,0,0"
+                Width="460"
+                Height="267"
+                Margin="922,138,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
@@ -308,57 +306,6 @@
                 Width="192"
                 Height="80"
                 Margin="508,259,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Background="SeaShell"
-                BorderBrush="DarkBlue"
-                FontFamily="Bell MT"
-                FontSize="20"
-                Foreground="DarkBlue"
-                Text="TextBox"
-                TextWrapping="Wrap" />
-            <TextBox
-                x:Name="GunIdaddpage"
-                Grid.Row="1"
-                Width="192"
-                Height="80"
-                Margin="80,365,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Background="SeaShell"
-                BorderBrush="DarkBlue"
-                FontFamily="Bell MT"
-                FontSize="20"
-                Foreground="DarkBlue"
-                Text="TextBox"
-                TextWrapping="Wrap" />
-            <TextBox
-                x:Name="EngineIdaddpage"
-                Grid.Row="1"
-                Width="192"
-                Height="80"
-                Margin="294,365,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Background="SeaShell"
-                BorderBrush="DarkBlue"
-                FontFamily="Bell MT"
-                FontSize="20"
-                Foreground="DarkBlue"
-                Text="TextBox"
-                TextWrapping="Wrap" />
-            <TextBox
-                x:Name="ArmorIdaddpage"
-                Grid.Row="1"
-                Width="192"
-                Height="80"
-                Margin="508,365,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
@@ -481,10 +428,9 @@
                 Foreground="DarkBlue" />
             <Button
                 x:Name="btnaddarmorDB"
-                Grid.Row="1"
-                Width="197"
+                Width="192"
                 Height="68"
-                Margin="687,59,0,0"
+                Margin="686,296,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -507,10 +453,9 @@
             </Button>
             <Button
                 x:Name="btnaddengineDB"
-                Grid.Row="1"
                 Width="221"
                 Height="68"
-                Margin="674,147,0,0"
+                Margin="669,375,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -533,10 +478,9 @@
             </Button>
             <Button
                 x:Name="btnaddGunDB"
-                Grid.Row="1"
-                Width="221"
+                Width="222"
                 Height="68"
-                Margin="724,255,0,0"
+                Margin="669,456,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="SeaShell"
@@ -557,6 +501,45 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
+            <ComboBox
+                x:Name="cmbboxengine"
+                Grid.Row="1"
+                Width="192"
+                Height="79"
+                Margin="294,365,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderBrush="DarkBlue"
+                Foreground="DarkBlue">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0" />
+                        <GradientStop Offset="1" Color="SeaShell" />
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <ComboBox
+                x:Name="cmbboxgun"
+                Grid.Row="1"
+                Width="192"
+                Height="79"
+                Margin="80,365,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderBrush="DarkBlue"
+                Foreground="DarkBlue" SelectionChanged="cmbboxgun_SelectionChanged">
+            </ComboBox>
+            <ComboBox
+                x:Name="cmbboxarmor"
+                Grid.Row="1"
+                Width="192"
+                Height="79"
+                Margin="510,365,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderBrush="DarkBlue"
+                Foreground="DarkBlue">
+            </ComboBox>
         </Grid>
     </ScrollViewer>
 </Window>

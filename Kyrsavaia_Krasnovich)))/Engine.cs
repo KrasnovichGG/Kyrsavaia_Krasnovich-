@@ -30,7 +30,7 @@ namespace Kyrsavaia_Krasnovich___
             {
                 MongoClient clientEngine = new MongoClient(App.ConnectionString);
                 var v = clientEngine.GetDatabase(App.NameBase);
-                var c = v.GetCollection<IEngine>(App.EngineCollection);
+                var c = v.GetCollection<Engine>(App.EngineCollection);
                 Tankist?.Invoke("Двигатель добавлен в базу данных");
                 c.InsertOne(this);
             }
@@ -39,11 +39,11 @@ namespace Kyrsavaia_Krasnovich___
                 Tankist?.Invoke("Такой двигатель уже существует!!!");
             }
         }
-        public async static Task<List<IEngine>> TakeEngineList()
+        public async static Task<List<Engine>> TakeEngineList()
         {
             MongoClient mongoClientListEngine = new MongoClient(App.ConnectionString);
             var v = mongoClientListEngine.GetDatabase(App.NameBase);
-            return await v.GetCollection<IEngine>(App.EngineCollection).FindAsync(x => true).Result.ToListAsync();
+            return await v.GetCollection<Engine>(App.EngineCollection).FindAsync(x => true).Result.ToListAsync();
         }
 
         private async Task<bool> Check()

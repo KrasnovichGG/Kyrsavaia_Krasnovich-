@@ -24,6 +24,25 @@ namespace Kyrsavaia_Krasnovich___
         public Page1()
         {
             InitializeComponent();
+            GetArmorCmb();
+        }
+
+        private void GetArmorCmb()
+        {
+            foreach (var item in Armor.TakeArmorList().Result)
+            {
+                cmbboxarmor.Items.Add(item.NameArmor);
+            }
+            
+            foreach (var item in Engine.TakeEngineList().Result)
+            {
+                cmbboxengine.Items.Add(item.Name);
+            }
+            
+            foreach (var item in Gun.TakeGunList().Result)
+            {
+                cmbboxgun.Items.Add(item.Name);
+            }
         }
 
         private void btnaddarmorDB_Click(object sender, RoutedEventArgs e)
@@ -41,8 +60,8 @@ namespace Kyrsavaia_Krasnovich___
         private async void bntaddtankinprolojenie_Click(object sender, RoutedEventArgs e)
         {
             Tank tank = new Tank(txtbxnametank.Text, txtspeedaddpage.Text, txtdlinakorpusapageadd.Text, 
-                godvipuskaaddpage.Text, kalibraddpage.Text, await Armor.GetArmor(ArmorIdaddpage.Text), 
-                await Engine.GetEngine(EngineIdaddpage.Text), await Gun.GetGun(GunIdaddpage.Text));
+                godvipuskaaddpage.Text, kalibraddpage.Text, await Armor.GetArmor(cmbboxarmor.Text), 
+                await Engine.GetEngine(cmbboxengine.Text), await Gun.GetGun(cmbboxgun.Text));
             tank.Tankist += (e) => MessageBox.Show(e);
             await tank.AddToDataBaseTank();
         }
@@ -51,6 +70,11 @@ namespace Kyrsavaia_Krasnovich___
         {
            GunaddPage gunaddPage = new GunaddPage();
            gunaddPage.Show();
+        }
+
+        private void cmbboxgun_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

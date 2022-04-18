@@ -28,7 +28,7 @@ namespace Kyrsavaia_Krasnovich___
             {
                 MongoClient mongoClientGun = new MongoClient(App.ConnectionString);
                 var c = mongoClientGun.GetDatabase(App.NameBase);
-                var b = c.GetCollection<IGun>(App.GunCollection);
+                var b = c.GetCollection<Gun>(App.GunCollection);
                 Tankist.Invoke("Орудие добавлено в базу данных!");
                 b.InsertOne(this);
             }
@@ -38,11 +38,11 @@ namespace Kyrsavaia_Krasnovich___
             }
            
         }
-        public async static Task<List<IGun>> TakeGunList()
+        public async static Task<List<Gun>> TakeGunList()
         {
             MongoClient mongoClientTakeGun = new MongoClient(App.ConnectionString);
             var c = mongoClientTakeGun.GetDatabase(App.NameBase);
-            return await c.GetCollection<IGun>(App.GunCollection).FindAsync(x => true).Result.ToListAsync();
+            return await c.GetCollection<Gun>(App.GunCollection).FindAsync(x => true).Result.ToListAsync();
         }
         private async Task<bool> Check()
         {
